@@ -1,22 +1,14 @@
-# Shray & Co Supplies Ltd — Website First Version
+SHRAY & CO SUPPLIES LTD — FINAL WEBSITE VERSION
 
-Files:
-- index.html
-- styles.css
-- script.js
+This version follows the approved visual direction:
+- Large Shray & Co Supplies Ltd branding on the left
+- Reliable Chemical Supply / Professional Global Sourcing on the right
+- Global-supply / quality / pricing / logistics benefits
+- Product cards for SLES 70%, CAPB 35%, CAPB 45%, LABSA 96%
+- Contact and quotation links remain functional
+- Nish Patel appears only in the Contact section
 
-How to preview:
-1. Keep all three files in the same folder.
-2. Double-click index.html.
-3. It will open in your web browser.
-
-This first version is a static responsive website. The enquiry form opens the visitor's email app and prepares an email to:
-nishpatel@shraysuppliesltd.com
-
-Before publishing publicly, suggested next steps:
-- Replace the placeholder S&C globe mark with the final company logo.
-- Add registered office / Companies House details where appropriate.
-- Add Privacy Policy, Cookie Policy and website Terms.
-- Connect the enquiry form to a proper form service or website backend.
-- Add domain hosting and SSL.
-- Optionally add downloadable product TDS/SDS documents after deciding which documents should be public.
+To preview:
+1. Extract the ZIP.
+2. Open the Shray-Co-Website-Final folder.
+3. Double-click index.html.
