@@ -57,7 +57,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #f3bf32;outline-offset:3p
 .benefit span{color:var(--muted);font-size:.86rem}
 
 .products-section{padding:24px 0 42px;text-align:center}
-.products-section h2,.about-section h2,.quality-section h2,.contact-section h2,.sourcing-cta h2{color:var(--navy);font-size:clamp(2rem,3vw,3rem);line-height:1.08;margin:0}
+.products-section h2,.about-section h2,.quality-section h2,.contact-section h2,.sourcing-cta h2,.faq-section h2{color:var(--navy);font-size:clamp(2rem,3vw,3rem);line-height:1.08;margin:0}
 .section-sub{margin:8px 0 24px;color:var(--muted)}
 .product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:start}
 .product-card{background:#fff;border:1px solid #dce6f0;border-radius:10px;overflow:hidden;box-shadow:0 7px 18px rgba(5,42,94,.07);text-align:left}
@@ -79,6 +79,8 @@ a:focus-visible,button:focus-visible{outline:3px solid #f3bf32;outline-offset:3p
 .product-info strong{color:var(--ink)}
 .product-enquiry{display:block;background:var(--blue);color:#fff;text-align:center;text-decoration:none;border-radius:6px;padding:10px 12px;font-size:.82rem;font-weight:800;margin:12px 0 9px}
 .product-enquiry:hover{background:#084f9e}
+.product-page-link{display:block;color:var(--blue);font-size:.82rem;font-weight:800;text-decoration:none;text-align:center;margin:0 0 10px}
+.product-page-link:hover{text-decoration:underline}
 .product-info small{display:block;color:var(--muted);font-size:.72rem;line-height:1.4}
 
 .about-section,.quality-section{padding:62px 0}
@@ -93,6 +95,15 @@ a:focus-visible,button:focus-visible{outline:3px solid #f3bf32;outline-offset:3p
 .sourcing-cta p{margin:8px 0 0;color:#e5effa}
 .contact-btn{border:1px solid rgba(255,255,255,.85);padding:13px 35px;border-radius:7px;color:#fff;text-decoration:none;font-weight:800;background:rgba(255,255,255,.05)}
 
+.faq-section{background:#f7fafc;padding:62px 0}
+.faq-section h2{margin-bottom:24px}
+.faq-list{display:grid;grid-template-columns:1fr 1fr;gap:12px 16px}
+.faq-list details{background:#fff;border:1px solid #dce6f0;border-radius:8px;padding:0 17px;box-shadow:0 4px 13px rgba(5,42,94,.04)}
+.faq-list summary{cursor:pointer;color:var(--navy);font-weight:800;line-height:1.35;padding:16px 25px 16px 0;position:relative}
+.faq-list summary::marker{color:var(--gold)}
+.faq-list p{color:var(--muted);font-size:.94rem;line-height:1.55;margin:0 0 16px}
+.faq-list a{color:var(--blue)}
+
 .contact-section{background:var(--navy);color:#fff;padding:58px 0}
 .contact-section h2{color:#fff}
 .contact-section p{color:#dbe7f5}
@@ -101,6 +112,43 @@ a:focus-visible,button:focus-visible{outline:3px solid #f3bf32;outline-offset:3p
 .contact-card{border:1px solid rgba(255,255,255,.24);border-radius:10px;padding:24px;display:flex;flex-direction:column;gap:7px}
 .contact-card a{color:#fff;text-decoration:none}
 .contact-card strong{font-size:1.2rem}
+
+.product-breadcrumb{padding:18px 0 0;font-size:.88rem;color:var(--muted)}
+.product-breadcrumb a{color:var(--blue);text-decoration:none}
+.product-hero{padding:24px 0 54px;background:linear-gradient(145deg,#edf7ff,#dbeafa)}
+.product-hero-inner{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(260px,.8fr);gap:48px;align-items:center}
+.product-hero h1{font-size:clamp(2.5rem,5vw,4.3rem);line-height:1.02;letter-spacing:-.04em;color:var(--navy);margin:0 0 12px}
+.product-hero h1 + p{font-size:1.2rem;font-weight:800;margin:0 0 14px;color:var(--ink)}
+.product-hero-copy > p:last-child{color:var(--muted);line-height:1.65;max-width:680px}
+.product-hero-image{width:100%;border-radius:12px;min-height:245px;object-fit:cover;box-shadow:0 14px 30px rgba(5,42,94,.14)}
+.product-shell{padding:54px 0 0}
+.product-intro{font-size:1.07rem;line-height:1.7;color:var(--muted);max-width:840px;margin:0 0 30px}
+.product-details-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;margin-bottom:32px}
+.product-panel{background:#fff;border:1px solid #dce6f0;border-radius:12px;padding:26px;box-shadow:0 7px 18px rgba(5,42,94,.06)}
+.product-panel h2,.product-trust-section h2,.product-contact-section h2{color:var(--navy);font-size:1.65rem;line-height:1.2;margin:0 0 16px}
+.product-specs{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line)}
+.product-specs div{padding:11px 0;border-bottom:1px solid var(--line)}
+.product-specs div:nth-child(odd){padding-right:16px}
+.product-specs dt{color:var(--muted);font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em}
+.product-specs dd{margin:4px 0 0;color:var(--ink);font-weight:700;line-height:1.35}
+.applications-list,.check-list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.applications-list li,.check-list li{color:var(--muted);line-height:1.45;padding-left:24px;position:relative}
+.applications-list li::before,.check-list li::before{content:"✓";position:absolute;left:0;color:var(--blue);font-weight:900}
+.documentation-panel{margin:0 0 54px;background:#f7fafc;border:1px solid #dce6f0;border-radius:12px;padding:30px}
+.documentation-panel p{color:var(--muted);line-height:1.6;max-width:850px}
+.product-note{font-size:.9rem!important;border-left:3px solid var(--gold);padding-left:14px}
+.product-trust-section{background:#fff;padding:54px 0}
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.trust-card{border:1px solid #dce6f0;border-radius:10px;padding:20px;background:#f8fbfe;color:var(--ink);font-weight:800}
+.trust-card::before{content:"✓";color:var(--gold);font-size:1.1rem;margin-right:9px}
+.product-contact-section{background:var(--navy);color:#fff;padding:52px 0}
+.product-contact-section h2{color:#fff}
+.product-contact-section p{color:#dbe7f5;line-height:1.6}
+.product-contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:42px;align-items:center}
+.product-contact-card{border:1px solid rgba(255,255,255,.24);border-radius:12px;padding:25px;display:flex;flex-direction:column;gap:8px}
+.product-contact-card a{color:#fff;text-decoration:none}
+.product-contact-card strong{font-size:1.2rem}
+.quote-action{display:inline-block;background:#fff;color:var(--navy)!important;text-decoration:none!important;border-radius:7px;padding:13px 18px;margin-top:10px;font-weight:900;text-align:center}
 
 .legal-section{background:#f7fafc;padding:46px 0}
 .legal-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px}
@@ -111,6 +159,9 @@ a:focus-visible,button:focus-visible{outline:3px solid #f3bf32;outline-offset:3p
 
 footer{background:#031e45;color:#d5e0ec;padding:20px 0;font-size:.83rem}
 .footer-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:20px;align-items:center}
+.footer-description{grid-column:1/-1;border-bottom:1px solid rgba(255,255,255,.18);padding:0 0 16px}
+.footer-description p{max-width:960px;line-height:1.55;margin:0 0 7px;color:#d5e0ec}
+.footer-description p:last-child{margin-bottom:0}
 .company-details{display:block;margin-top:5px}
 .footer-links{display:flex;gap:8px;justify-content:center;align-items:center}
 .footer-links a{color:#d5e0ec;text-decoration:none}
@@ -127,6 +178,8 @@ footer{background:#031e45;color:#d5e0ec;padding:20px 0;font-size:.83rem}
   .benefits{grid-template-columns:1fr 1fr}
   .benefit:nth-child(2){border-right:0}
   .product-grid{grid-template-columns:1fr 1fr}
+  .faq-list,.product-hero-inner,.product-details-grid,.product-contact-grid{grid-template-columns:1fr}
+  .trust-grid{grid-template-columns:1fr 1fr}
   .footer-grid{grid-template-columns:1fr}
   .footer-links{justify-content:flex-start;flex-wrap:wrap}
   .footer-tag{text-align:left}
@@ -146,10 +199,13 @@ footer{background:#031e45;color:#d5e0ec;padding:20px 0;font-size:.83rem}
   .hero-left{padding:35px 20px}
   .hero-copy{padding:32px 20px}
   .hero h1{font-size:3rem}
-  .benefits,.product-grid,.two-col,.contact-grid,.legal-grid{grid-template-columns:1fr}
+  .benefits,.product-grid,.two-col,.contact-grid,.legal-grid,.trust-grid,.product-specs{grid-template-columns:1fr}
   .benefit{border-right:0;border-bottom:1px solid #dfe8f2}
   .benefit:last-child{border-bottom:0}
   .sourcing-inner{padding:28px 0;align-items:flex-start;flex-direction:column}
+  .product-specs div:nth-child(odd){padding-right:0}
+  .product-hero{padding-bottom:36px}
+  .product-shell{padding-top:36px}
 }
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
