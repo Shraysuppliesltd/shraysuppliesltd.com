@@ -40,3 +40,39 @@ const year = document.getElementById('year');
 if (year) {
   year.textContent = String(new Date().getFullYear());
 }
+
+
+const enquirySelect = document.querySelector('#enquiry select[name="product"]');
+document.querySelectorAll('[data-enquiry-product]').forEach((link) => {
+  link.addEventListener('click', () => {
+    if (enquirySelect) enquirySelect.value = link.dataset.enquiryProduct || '';
+  });
+});
+
+const enquiryLabels = {
+  name: 'Name',
+  company: 'Company',
+  email: 'Email',
+  telephone: 'Telephone',
+  product: 'Product',
+  quantity: 'Quantity required',
+  destination: 'Destination country',
+  packaging: 'Packaging preference',
+  message: 'Further requirements'
+};
+
+document.querySelectorAll('[data-mailto-form]').forEach((form) => {
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    const fields = new FormData(form);
+    const lines = ['Website enquiry', ''];
+    Object.entries(enquiryLabels).forEach(([name, label]) => {
+      const value = String(fields.get(name) || '').trim();
+      if (value) lines.push(label + ': ' + value);
+    });
+    lines.push('', 'Please contact me regarding this enquiry.');
+    const subject = form.dataset.formSubject || 'Website enquiry';
+    window.location.href = 'mailto:nishpatel@shraysuppliesltd.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
+  });
+});
