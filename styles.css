@@ -297,3 +297,11 @@ footer{background:#031e45;color:#d5e0ec;padding:20px 0;font-size:.83rem}
   .payment-protection{padding:46px 0}
   .payment-protection-list{grid-template-columns:1fr}
 }
+
+/* Mobile product-page readability */
+@media(max-width:620px){
+  .site-header{position:static}
+  .product-hero{padding-top:24px}
+  .product-hero-inner{gap:24px}
+  .product-hero-image{height:auto;min-height:0;object-fit:contain;background:#fff}
+}
