@@ -326,3 +326,21 @@ footer{background:#031e45;color:#d5e0ec;padding:20px 0;font-size:.83rem}
   .product-hero-image-frame{aspect-ratio:4 / 1}
   .product-image-caption{padding:15px 16px 17px}
 }
+
+
+/* Direct enquiry confirmation */
+.form-note a{color:var(--blue);font-weight:800;text-underline-offset:3px}
+.thank-you-section{min-height:60vh;display:grid;align-items:center;padding:82px 0;background:linear-gradient(180deg,#eef6ff 0%,#fff 100%)}
+.thank-you-card{max-width:760px;padding:46px;background:#fff;border:1px solid #dce6f0;border-radius:14px;box-shadow:0 14px 32px rgba(5,42,94,.1);text-align:center}
+.thank-you-card .section-kicker{margin-bottom:14px}
+.thank-you-card h1{margin:0 0 16px;color:var(--navy);font-size:clamp(2rem,4vw,3.2rem);line-height:1.08}
+.thank-you-card p{max-width:620px;margin:0 auto;color:var(--muted);font-size:1.04rem;line-height:1.7}
+.thank-you-card .thank-you-detail{margin-top:12px;font-size:.94rem}
+.thank-you-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:26px}
+.thank-you-actions .btn{min-width:174px}
+@media(max-width:620px){
+  .thank-you-section{min-height:54vh;padding:50px 0}
+  .thank-you-card{padding:32px 22px}
+  .thank-you-actions{display:grid;grid-template-columns:1fr}
+  .thank-you-actions .btn{width:100%}
+}
