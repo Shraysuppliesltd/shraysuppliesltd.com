@@ -76,3 +76,10 @@ document.querySelectorAll('[data-mailto-form]').forEach((form) => {
     window.location.href = 'mailto:nishpatel@shraysuppliesltd.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
   });
 });
+
+const productPage = document.querySelector('.product-page');
+if (productPage) {
+  window.addEventListener('pageshow', () => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, { once: true });
+}
