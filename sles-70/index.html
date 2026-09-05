@@ -25,8 +25,8 @@
   }
 }
 </script>
-<link rel="stylesheet" href="../styles.css?v=20260905-product-image-labels">
-<script src="../script.js?v=20260905-mobile-fix" defer></script>
+<link rel="stylesheet" href="../styles.css?v=20260905-enquiry-form">
+<script src="../script.js?v=20260905-enquiry-form" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -108,7 +108,11 @@
         <h2 id="product-enquiry-heading">Request a SLES 70% quotation</h2>
         <p>Share your quantity, destination and packaging requirement. We will confirm commercial availability, pack size, documentation, indicative lead time and next steps for your enquiry.</p>
       </div>
-      <form class="enquiry-form product-form" data-mailto-form data-form-subject="SLES 70% quotation request">
+      <form class="enquiry-form product-form" action="https://formsubmit.co/nishpatel@shraysuppliesltd.com" method="POST" data-formsubmit-form>
+        <input type="hidden" name="_subject" value="SLES 70% quotation request — Shray &amp; Co Supplies Ltd">
+        <input type="hidden" name="_next" value="https://shraysuppliesltd.com/thanks.html">
+        <input type="hidden" name="_autoresponse" value="Thank you for contacting Shray &amp; Co Supplies Ltd. We have received your quotation enquiry and aim to acknowledge it within one working day. A detailed quotation may require product, documentation and destination-market checks.">
+
         <div class="form-row">
           <label><span>Product</span><input name="product" value="SLES 70%" readonly></label>
           <label><span>Quantity required *</span><input name="quantity" placeholder="For example: 1 x 20 ft container" required></label>
@@ -118,12 +122,12 @@
           <label><span>Company</span><input name="company" autocomplete="organization"></label>
         </div>
         <div class="form-row">
-          <label><span>Email address *</span><input name="email" type="email" autocomplete="email" required></label>
+          <label><span>Email address *</span><input name="_replyto" type="email" autocomplete="email" required></label>
           <label><span>Destination country *</span><input name="destination" required></label>
         </div>
         <label><span>Packaging or documentation requirement</span><textarea name="message" rows="3" placeholder="Please include preferred packaging and any TDS, SDS or COA request."></textarea></label>
-        <button class="form-submit" type="submit">Prepare product enquiry email <span aria-hidden="true">→</span></button>
-        <p class="form-note">Selecting this button opens your email app with the enquiry completed. Please press Send to submit it.</p>
+        <button class="form-submit" type="submit">Send product enquiry <span aria-hidden="true">→</span></button>
+        <p class="form-note">Your enquiry is delivered to Shray &amp; Co Supplies Ltd through our form delivery service. Please do not include card, bank-account or other payment information.</p>
       </form>
     </div>
   </section>
