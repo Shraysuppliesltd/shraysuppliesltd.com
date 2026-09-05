@@ -305,3 +305,11 @@ footer{background:#031e45;color:#d5e0ec;padding:20px 0;font-size:.83rem}
   .product-hero-inner{gap:24px}
   .product-hero-image{height:auto;min-height:0;object-fit:contain;background:#fff}
 }
+
+
+/* Compact WhatsApp control on phones */
+@media(max-width:620px){
+  .whatsapp-float{width:52px;height:52px;padding:0;justify-content:center;right:14px;bottom:14px}
+  .whatsapp-float span:last-child{display:none}
+  .whatsapp-float span:first-child{font-size:1.35rem}
+}
