@@ -391,3 +391,32 @@ footer{background:#031e45;color:#d5e0ec;padding:20px 0;font-size:.83rem}
 @media(max-width:620px){
   .product-hero-graphic{min-height:190px}
 }
+
+
+/* Preserve the full 2:1 Polysorbate product photography on its detail pages */
+.product-hero-image-frame.product-hero-image-frame--polysorbate{aspect-ratio:2 / 1}
+@media(max-width:620px){
+  .product-hero-image-frame.product-hero-image-frame--polysorbate{aspect-ratio:2 / 1}
+}
+
+
+/* Polysorbate product photography */
+.product-card-visual--20{background:linear-gradient(135deg,rgba(5,42,94,.28),rgba(10,98,199,.16)),url('assets/polysorbate-20.webp') center/cover no-repeat}
+.product-card-visual--60{background:linear-gradient(135deg,rgba(5,42,94,.28),rgba(10,98,199,.16)),url('assets/polysorbate-60.webp') center/cover no-repeat}
+.product-card-visual--80{background:linear-gradient(135deg,rgba(5,42,94,.28),rgba(10,98,199,.16)),url('assets/polysorbate-80.webp') center/cover no-repeat}
+.product-card-visual--20 .product-card-visual-code,
+.product-card-visual--60 .product-card-visual-code,
+.product-card-visual--80 .product-card-visual-code{
+  padding:8px 13px;
+  border:1px solid rgba(255,255,255,.52);
+  border-radius:8px;
+  background:rgba(3,30,69,.75);
+  box-shadow:0 4px 14px rgba(0,0,0,.2);
+}
+.product-card-visual--20 .product-card-visual-label,
+.product-card-visual--60 .product-card-visual-label,
+.product-card-visual--80 .product-card-visual-label{
+  padding:5px 8px;
+  border-radius:5px;
+  background:rgba(3,30,69,.68);
+}
