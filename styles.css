@@ -391,3 +391,10 @@ footer{background:#031e45;color:#d5e0ec;padding:20px 0;font-size:.83rem}
 @media(max-width:620px){
   .product-hero-graphic{min-height:190px}
 }
+
+
+/* Preserve the full 2:1 Polysorbate product photography on its detail pages */
+.product-hero-image-frame.product-hero-image-frame--polysorbate{aspect-ratio:2 / 1}
+@media(max-width:620px){
+  .product-hero-image-frame.product-hero-image-frame--polysorbate{aspect-ratio:2 / 1}
+}
