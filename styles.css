@@ -28,11 +28,12 @@ a:focus-visible,button:focus-visible{outline:3px solid #f3bf32;outline-offset:3p
 .quote-top{background:var(--blue);color:#fff;text-decoration:none;padding:12px 18px;border-radius:7px;font-weight:700;font-size:.9rem}
 .menu-toggle{display:none;border:1px solid var(--blue);background:#fff;color:var(--navy);border-radius:6px;padding:9px 12px;font:inherit;font-weight:800;cursor:pointer}
 
-.hero{display:grid;grid-template-columns:42% 58%;min-height:430px;background:linear-gradient(180deg,#eff8ff,#dfeffc);overflow:hidden}
+.hero{display:grid;grid-template-columns:50% 50%;min-height:430px;background:linear-gradient(180deg,#eff8ff,#dfeffc);overflow:hidden}
 .hero-left{padding:50px 34px 45px max(34px,calc((100vw - 1180px)/2));display:flex;flex-direction:column;justify-content:center;background:rgba(255,255,255,.78)}
 .brand-lockup{display:flex;align-items:center;gap:16px}
 .brand-mark{width:164px;height:auto;max-height:190px;object-fit:contain}
 .brand-name{font-size:clamp(3rem,4.5vw,4.75rem);line-height:.98;font-weight:800;color:var(--navy);letter-spacing:-.04em}
+.brand-name span{display:block;white-space:nowrap}
 .gold-line{height:3px;background:var(--gold);width:min(430px,90%);margin:18px 0}
 .brand-tag{font-size:.86rem;font-weight:800;letter-spacing:.16em;color:var(--navy)}
 .brand-tag span{color:var(--gold);padding:0 .5em}
@@ -183,9 +184,9 @@ footer{background:#031e45;color:#d5e0ec;padding:20px 0;font-size:.83rem}
   .nav-links{display:none;grid-column:1/-1;flex-direction:column;gap:0;overflow:visible;border-top:1px solid #e6edf5}
   .nav-links.open{display:flex}
   .nav-links a{padding:12px 2px;border-bottom:1px solid #e6edf5}
-  .brand-lockup{align-items:center}
-  .brand-mark{width:118px}
-  .brand-name{font-size:2.7rem}
+  .brand-lockup{align-items:center;gap:12px}
+  .brand-mark{width:106px;max-height:145px}
+  .brand-name{font-size:clamp(2rem,9vw,2.45rem)}
   .hero-left{padding:35px 20px}
   .hero-copy{padding:32px 20px}
   .hero h1{font-size:3rem}
