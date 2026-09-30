@@ -1,3 +1,9 @@
+// Load the responsive display safeguards after the main stylesheet.
+const responsiveFixes = document.createElement('link');
+responsiveFixes.rel = 'stylesheet';
+responsiveFixes.href = '/responsive-fixes.css?v=20260930';
+document.head.appendChild(responsiveFixes);
+
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav-links');
 
@@ -40,7 +46,6 @@ const year = document.getElementById('year');
 if (year) {
   year.textContent = String(new Date().getFullYear());
 }
-
 
 const enquirySelect = document.querySelector('#enquiry select[name="product"]');
 document.querySelectorAll('[data-enquiry-product]').forEach((link) => {
