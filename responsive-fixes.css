@@ -5,26 +5,26 @@
 .brand-name span{white-space:normal}
 .hero-bg{background:linear-gradient(135deg,#eaf6ff 0%,#d6eaf9 58%,#bddcf2 100%)!important}
 
+/* Homepage hierarchy: company name is primary; service headline supports it. */
+.hero-left{background:linear-gradient(145deg,#f7fbff 0%,#e7f3fc 100%)!important}
+.brand-name{font-size:clamp(3.35rem,5vw,5.15rem)!important;color:#052a5e!important;font-weight:900!important;text-shadow:0 1px 0 rgba(255,255,255,.9)}
+.brand-mark{filter:drop-shadow(0 5px 10px rgba(5,42,94,.12))}
+.hero h1{font-size:clamp(2.75rem,4.35vw,4.35rem)!important;line-height:.98!important}
+.hero-copy{max-width:590px}
+.hero-right{background:linear-gradient(145deg,#eaf6ff,#d6eaf9)}
+
 /* Homepage product cards: clean raw-material visual with one clear label. */
 .product-grid .product-card:nth-child(-n+4) img{display:none!important;width:0!important;height:0!important;min-height:0!important;margin:0!important;padding:0!important}
-.product-grid .product-card:nth-child(-n+4) .product-card-link::before{
- content:"RAW MATERIAL";min-height:116px;display:grid;place-items:center;padding:16px;
- background:linear-gradient(145deg,#eef8ff,#cfe7f6);color:#052a5e;font-size:1rem;font-weight:900;
- letter-spacing:.16em;text-align:center;border-bottom:1px solid #dce6f0
-}
+.product-grid .product-card:nth-child(-n+4) .product-card-link::before{content:"RAW MATERIAL";min-height:116px;display:grid;place-items:center;padding:16px;background:linear-gradient(145deg,#eef8ff,#cfe7f6);color:#052a5e;font-size:1rem;font-weight:900;letter-spacing:.16em;text-align:center;border-bottom:1px solid #dce6f0}
 .product-grid .product-card:nth-child(-n+4) .product-card-link{position:relative}
-.product-grid .product-card:nth-child(-n+4) .product-card-link::after{
- content:"CHEMICAL SUPPLY";position:absolute;top:77px;left:0;right:0;text-align:center;
- color:#dda415;font-size:.62rem;font-weight:900;letter-spacing:.18em;pointer-events:none
-}
-.product-card{overflow:visible}.product-card-link{overflow:hidden;border-radius:10px}.product-copy{min-width:0}
-.product-copy h3,.product-copy p,.product-copy .product-type,.product-card-cta{overflow-wrap:anywhere}
+.product-grid .product-card:nth-child(-n+4) .product-card-link::after{content:"CHEMICAL SUPPLY";position:absolute;top:77px;left:0;right:0;text-align:center;color:#dda415;font-size:.62rem;font-weight:900;letter-spacing:.18em;pointer-events:none}
+.product-card{overflow:visible}.product-card-link{overflow:hidden;border-radius:10px}.product-copy{min-width:0}.product-copy h3,.product-copy p,.product-copy .product-type,.product-card-cta{overflow-wrap:anywhere}
 
 /* Individual product pages: artwork must be fully visible, never cropped. */
 .product-hero-image-frame{background:linear-gradient(145deg,#f4faff,#dceefa);border:1px solid #d5e5f1;border-radius:14px;padding:14px;box-shadow:0 14px 30px rgba(5,42,94,.11);display:flex;align-items:center;justify-content:center}
 .product-hero-image{width:auto!important;max-width:100%!important;height:auto!important;max-height:270px!important;min-height:0!important;object-fit:contain!important;object-position:center!important;border-radius:9px;display:block;box-shadow:none!important}
 .product-image-caption{padding:12px 4px 0}.product-image-caption strong,.product-image-caption span{display:block}
 
-@media (min-width:951px) and (max-width:1180px){.hero{grid-template-columns:48% 52%}.hero-left{padding:38px 22px 38px 26px}.brand-lockup{gap:10px}.brand-mark{width:108px;flex:0 0 auto}.brand-name{font-size:clamp(2.65rem,4vw,3.55rem);line-height:1}.brand-tag{font-size:.69rem;letter-spacing:.09em}.hero-copy{padding:36px 24px}.hero h1{font-size:clamp(2.65rem,4.5vw,4rem)}}
-@media(max-width:950px){.hero{grid-template-columns:1fr;min-height:0;overflow:visible}.hero-left{min-height:300px}.hero-right{min-height:330px}.brand-name{font-size:clamp(2.5rem,7vw,4rem)}.product-hero-image{max-height:250px!important}}
-@media(max-width:620px){.site-header{position:relative!important;top:auto!important;height:auto!important;min-height:0!important;z-index:50}.nav{min-height:0!important;height:auto!important;padding:10px 13px 14px!important;grid-template-columns:minmax(0,1fr) auto!important;align-items:center!important}.mini-brand{min-width:0!important;white-space:normal!important;line-height:1.15!important;font-size:.82rem!important}.menu-toggle{position:static!important;margin:0!important}.quote-top{position:static!important;grid-column:1/-1!important;width:100%!important;margin:8px 0 0!important;padding:15px 12px!important;display:block!important}.nav-links{position:static!important;grid-column:1/-1!important;width:100%!important}main{position:relative!important;z-index:1!important}.hero{margin-top:0!important}.hero-left{min-height:0;padding:28px 18px}.brand-lockup{align-items:center;gap:10px}.brand-mark{width:82px;max-height:110px;flex:0 0 auto}.brand-name{font-size:clamp(1.75rem,8.1vw,2.3rem);line-height:1.03;letter-spacing:-.035em}.brand-tag{font-size:.68rem;line-height:1.5;letter-spacing:.08em}.gold-line{margin:14px 0}.hero-right{min-height:0}.hero-copy{padding:30px 18px 34px}.hero h1{font-size:clamp(2.25rem,11vw,3rem);line-height:.98}.product-grid{gap:18px}.product-card{min-height:0}.product-copy{padding:16px 15px 18px}.product-card-cta{padding-top:14px}.product-grid .product-card:nth-child(-n+4) .product-card-link::before{min-height:92px}.product-grid .product-card:nth-child(-n+4) .product-card-link::after{top:61px}.product-hero-image-frame{padding:9px}.product-hero-image{max-height:210px!important}}
+@media (min-width:951px) and (max-width:1180px){.hero{grid-template-columns:51% 49%}.hero-left{padding:38px 22px 38px 26px}.brand-lockup{gap:10px}.brand-mark{width:108px;flex:0 0 auto}.brand-name{font-size:clamp(2.85rem,4.25vw,3.8rem)!important;line-height:1}.brand-tag{font-size:.69rem;letter-spacing:.09em}.hero-copy{padding:36px 24px}.hero h1{font-size:clamp(2.45rem,3.9vw,3.65rem)!important}}
+@media(max-width:950px){.hero{grid-template-columns:1fr;min-height:0;overflow:visible}.hero-left{min-height:300px}.hero-right{min-height:330px}.brand-name{font-size:clamp(2.65rem,7.4vw,4.15rem)!important}.hero h1{font-size:clamp(2.45rem,7vw,3.6rem)!important}.product-hero-image{max-height:250px!important}}
+@media(max-width:620px){.site-header{position:relative!important;top:auto!important;height:auto!important;min-height:0!important;z-index:50}.nav{min-height:0!important;height:auto!important;padding:10px 13px 14px!important;grid-template-columns:minmax(0,1fr) auto!important;align-items:center!important}.mini-brand{min-width:0!important;white-space:normal!important;line-height:1.15!important;font-size:.82rem!important}.menu-toggle{position:static!important;margin:0!important}.quote-top{position:static!important;grid-column:1/-1!important;width:100%!important;margin:8px 0 0!important;padding:15px 12px!important;display:block!important}.nav-links{position:static!important;grid-column:1/-1!important;width:100%!important}main{position:relative!important;z-index:1!important}.hero{margin-top:0!important}.hero-left{min-height:0;padding:28px 18px}.brand-lockup{align-items:center;gap:10px}.brand-mark{width:82px;max-height:110px;flex:0 0 auto}.brand-name{font-size:clamp(1.9rem,8.6vw,2.5rem)!important;line-height:1.03;letter-spacing:-.035em}.brand-tag{font-size:.68rem;line-height:1.5;letter-spacing:.08em}.gold-line{margin:14px 0}.hero-right{min-height:0}.hero-copy{padding:30px 18px 34px}.hero h1{font-size:clamp(2.05rem,9.5vw,2.75rem)!important;line-height:1!important}.product-grid{gap:18px}.product-card{min-height:0}.product-copy{padding:16px 15px 18px}.product-card-cta{padding-top:14px}.product-grid .product-card:nth-child(-n+4) .product-card-link::before{min-height:92px}.product-grid .product-card:nth-child(-n+4) .product-card-link::after{top:61px}.product-hero-image-frame{padding:9px}.product-hero-image{max-height:210px!important}}
