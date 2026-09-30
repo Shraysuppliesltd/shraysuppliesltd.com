@@ -1,0 +1,68 @@
+/* Responsive display safeguards — 30 Sep 2026 */
+
+/* Prevent homepage hero text/logo collisions at every width. */
+.hero,
+.hero-left,
+.hero-right,
+.brand-lockup,
+.hero-copy { min-width: 0; }
+
+.brand-lockup { flex-wrap: nowrap; }
+.brand-name { min-width: 0; }
+.brand-name span { white-space: normal; overflow-wrap: normal; }
+.hero h1 { overflow-wrap: normal; }
+
+/* Product cards: show the complete supplied artwork rather than cropping it. */
+.product-card { overflow: visible; }
+.product-card-link { overflow: hidden; border-radius: 10px; }
+.product-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 1;
+  object-fit: contain;
+  object-position: center;
+  background: #f3f7fb;
+}
+.product-copy { min-width: 0; }
+.product-copy h3,
+.product-copy p,
+.product-copy .product-type,
+.product-card-cta { overflow-wrap: anywhere; }
+
+/* Laptop / small desktop: give each half enough room and reduce oversized headings. */
+@media (min-width: 951px) and (max-width: 1180px) {
+  .hero { grid-template-columns: 48% 52%; }
+  .hero-left { padding: 38px 22px 38px 26px; }
+  .brand-lockup { gap: 10px; }
+  .brand-mark { width: 108px; flex: 0 0 auto; }
+  .brand-name { font-size: clamp(2.65rem, 4vw, 3.55rem); line-height: 1; }
+  .brand-tag { font-size: .69rem; letter-spacing: .09em; }
+  .hero-copy { padding: 36px 24px; }
+  .hero h1 { font-size: clamp(2.65rem, 4.5vw, 4rem); }
+}
+
+/* Tablet: stack the two hero panels so they can never overlap. */
+@media (max-width: 950px) {
+  .hero { grid-template-columns: 1fr; min-height: 0; overflow: visible; }
+  .hero-left { min-height: 300px; }
+  .hero-right { min-height: 390px; }
+  .brand-name { font-size: clamp(2.5rem, 7vw, 4rem); }
+  .product-card img { aspect-ratio: 2 / 1; }
+}
+
+/* Phone: compact logo/title and ensure all product wording remains visible. */
+@media (max-width: 620px) {
+  .hero-left { min-height: 0; padding: 28px 18px; }
+  .brand-lockup { align-items: center; gap: 10px; }
+  .brand-mark { width: 82px; max-height: 110px; flex: 0 0 auto; }
+  .brand-name { font-size: clamp(1.75rem, 8.1vw, 2.3rem); line-height: 1.03; letter-spacing: -.035em; }
+  .brand-tag { font-size: .68rem; line-height: 1.5; letter-spacing: .08em; }
+  .gold-line { margin: 14px 0; }
+  .hero-right { min-height: 0; }
+  .hero-copy { padding: 30px 18px 34px; }
+  .hero h1 { font-size: clamp(2.25rem, 11vw, 3rem); line-height: .98; }
+  .product-grid { gap: 18px; }
+  .product-card { min-height: 0; }
+  .product-copy { padding: 16px 15px 18px; }
+  .product-card-cta { padding-top: 14px; }
+}
