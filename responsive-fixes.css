@@ -1,86 +1,50 @@
 /* Responsive display safeguards — 30 Sep 2026 */
+.hero,.hero-left,.hero-right,.brand-lockup,.hero-copy{min-width:0}
+.brand-lockup{flex-wrap:nowrap}
+.brand-name{min-width:0}
+.brand-name span{white-space:normal}
 
-/* Prevent homepage hero text/logo collisions at every width. */
-.hero,
-.hero-left,
-.hero-right,
-.brand-lockup,
-.hero-copy { min-width: 0; }
+/* Clean hero background: old image contained embedded wording. */
+.hero-bg{background:linear-gradient(135deg,#eaf6ff 0%,#d6eaf9 58%,#bddcf2 100%)!important}
 
-.brand-lockup { flex-wrap: nowrap; }
-.brand-name { min-width: 0; }
-.brand-name span { white-space: normal; overflow-wrap: normal; }
-.hero h1 { overflow-wrap: normal; }
+/* Legacy first-four product images contain embedded text. Never render them. */
+.product-grid .product-card:nth-child(-n+4) img{display:none!important;width:0!important;height:0!important;min-height:0!important;margin:0!important;padding:0!important}
+.product-grid .product-card:nth-child(-n+4) .product-card-link::before{content:"CHEMICAL RAW MATERIAL";min-height:104px;display:grid;place-items:center;padding:16px;background:linear-gradient(135deg,#e8f5ff,#cce7f8);color:#052a5e;font-size:.76rem;font-weight:900;letter-spacing:.13em;text-align:center;border-bottom:1px solid #dce6f0}
+.product-card{overflow:visible}
+.product-card-link{overflow:hidden;border-radius:10px}
+.product-copy{min-width:0}
+.product-copy h3,.product-copy p,.product-copy .product-type,.product-card-cta{overflow-wrap:anywhere}
 
-/* The old hero photograph contains wording baked into the image. Remove it so
-   the live HTML heading is the only wording shown and can never overlap it. */
-.hero-bg {
-  background: linear-gradient(135deg,#eaf6ff 0%,#d6eaf9 58%,#bddcf2 100%) !important;
+@media (min-width:951px) and (max-width:1180px){
+ .hero{grid-template-columns:48% 52%}
+ .hero-left{padding:38px 22px 38px 26px}
+ .brand-lockup{gap:10px}.brand-mark{width:108px;flex:0 0 auto}
+ .brand-name{font-size:clamp(2.65rem,4vw,3.55rem);line-height:1}
+ .brand-tag{font-size:.69rem;letter-spacing:.09em}
+ .hero-copy{padding:36px 24px}.hero h1{font-size:clamp(2.65rem,4.5vw,4rem)}
 }
 
-/* The first four legacy product artworks also contain product wording baked
-   into the pictures. Hide those artwork images and use a clean chemical-themed
-   banner so every product name/specification appears once, as live readable text. */
-.product-card img {
-  display: none !important;
-}
-.product-card:nth-child(-n+4) .product-card-link::before {
-  content: "CHEMICAL RAW MATERIAL";
-  min-height: 104px;
-  display: grid;
-  place-items: center;
-  padding: 16px;
-  background: linear-gradient(135deg,#e8f5ff,#cce7f8);
-  color: #052a5e;
-  font-size: .76rem;
-  font-weight: 900;
-  letter-spacing: .13em;
-  text-align: center;
-  border-bottom: 1px solid #dce6f0;
+@media(max-width:950px){
+ .hero{grid-template-columns:1fr;min-height:0;overflow:visible}
+ .hero-left{min-height:300px}.hero-right{min-height:330px}
+ .brand-name{font-size:clamp(2.5rem,7vw,4rem)}
 }
 
-.product-card { overflow: visible; }
-.product-card-link { overflow: hidden; border-radius: 10px; }
-.product-copy { min-width: 0; }
-.product-copy h3,
-.product-copy p,
-.product-copy .product-type,
-.product-card-cta { overflow-wrap: anywhere; }
-
-/* Laptop / small desktop: give each half enough room and reduce oversized headings. */
-@media (min-width: 951px) and (max-width: 1180px) {
-  .hero { grid-template-columns: 48% 52%; }
-  .hero-left { padding: 38px 22px 38px 26px; }
-  .brand-lockup { gap: 10px; }
-  .brand-mark { width: 108px; flex: 0 0 auto; }
-  .brand-name { font-size: clamp(2.65rem, 4vw, 3.55rem); line-height: 1; }
-  .brand-tag { font-size: .69rem; letter-spacing: .09em; }
-  .hero-copy { padding: 36px 24px; }
-  .hero h1 { font-size: clamp(2.65rem, 4.5vw, 4rem); }
-}
-
-/* Tablet: stack the two hero panels so they can never overlap. */
-@media (max-width: 950px) {
-  .hero { grid-template-columns: 1fr; min-height: 0; overflow: visible; }
-  .hero-left { min-height: 300px; }
-  .hero-right { min-height: 330px; }
-  .brand-name { font-size: clamp(2.5rem, 7vw, 4rem); }
-}
-
-/* Phone: compact logo/title and ensure all product wording remains visible. */
-@media (max-width: 620px) {
-  .hero-left { min-height: 0; padding: 28px 18px; }
-  .brand-lockup { align-items: center; gap: 10px; }
-  .brand-mark { width: 82px; max-height: 110px; flex: 0 0 auto; }
-  .brand-name { font-size: clamp(1.75rem, 8.1vw, 2.3rem); line-height: 1.03; letter-spacing: -.035em; }
-  .brand-tag { font-size: .68rem; line-height: 1.5; letter-spacing: .08em; }
-  .gold-line { margin: 14px 0; }
-  .hero-right { min-height: 0; }
-  .hero-copy { padding: 30px 18px 34px; }
-  .hero h1 { font-size: clamp(2.25rem, 11vw, 3rem); line-height: .98; }
-  .product-grid { gap: 18px; }
-  .product-card { min-height: 0; }
-  .product-copy { padding: 16px 15px 18px; }
-  .product-card-cta { padding-top: 14px; }
-  .product-card:nth-child(-n+4) .product-card-link::before { min-height: 78px; }
+@media(max-width:620px){
+ /* Header must grow with its contents; no page content may sit behind it. */
+ .site-header{position:relative!important;top:auto!important;height:auto!important;min-height:0!important;z-index:50}
+ .nav{min-height:0!important;height:auto!important;padding:10px 13px 14px!important;grid-template-columns:minmax(0,1fr) auto!important;align-items:center!important}
+ .mini-brand{min-width:0!important;white-space:normal!important;line-height:1.15!important;font-size:.82rem!important}
+ .menu-toggle{position:static!important;margin:0!important}
+ .quote-top{position:static!important;grid-column:1/-1!important;width:100%!important;margin:8px 0 0!important;padding:15px 12px!important;display:block!important}
+ .nav-links{position:static!important;grid-column:1/-1!important;width:100%!important}
+ main{position:relative!important;z-index:1!important}
+ .hero{margin-top:0!important}
+ .hero-left{min-height:0;padding:28px 18px}
+ .brand-lockup{align-items:center;gap:10px}.brand-mark{width:82px;max-height:110px;flex:0 0 auto}
+ .brand-name{font-size:clamp(1.75rem,8.1vw,2.3rem);line-height:1.03;letter-spacing:-.035em}
+ .brand-tag{font-size:.68rem;line-height:1.5;letter-spacing:.08em}.gold-line{margin:14px 0}
+ .hero-right{min-height:0}.hero-copy{padding:30px 18px 34px}.hero h1{font-size:clamp(2.25rem,11vw,3rem);line-height:.98}
+ .product-grid{gap:18px}.product-card{min-height:0}.product-copy{padding:16px 15px 18px}.product-card-cta{padding-top:14px}
+ .product-grid .product-card:nth-child(-n+4) .product-card-link::before{min-height:78px}
 }
