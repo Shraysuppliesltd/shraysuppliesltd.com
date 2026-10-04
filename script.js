@@ -1,8 +1,96 @@
 // Load the responsive display safeguards after the main stylesheet.
 const responsiveFixes = document.createElement('link');
 responsiveFixes.rel = 'stylesheet';
-responsiveFixes.href = '/responsive-fixes.css?v=20260930';
+responsiveFixes.href = '/responsive-fixes.css?v=20261004';
 document.head.appendChild(responsiveFixes);
+
+// Keep the public website positioned as an independent sourcing company.
+// Supplier-specific technical documents and quotation language are handled
+// privately during direct commercial discussions rather than displayed publicly.
+const publicCopyReplacements = [
+  [/Request a Quotation/g, 'Send an Enquiry'],
+  [/REQUEST A QUOTATION/g, 'SEND AN ENQUIRY'],
+  [/request a quotation/gi, 'send an enquiry'],
+  [/quotation enquiry/gi, 'website enquiry'],
+  [/quotation request/gi, 'website enquiry'],
+  [/quotation response/gi, 'enquiry response'],
+  [/detailed quotations/gi, 'detailed responses'],
+  [/detailed quotation/gi, 'detailed response'],
+  [/each quotation/gi, 'each enquiry'],
+  [/with the quotation/gi, 'during the order process'],
+  [/prepare quotations/gi, 'respond to commercial enquiries'],
+  [/For quotations, product documentation or supply enquiries/gi, 'For product sourcing and supply enquiries'],
+  [/quotation and supply terms/gi, 'commercial and supply terms'],
+  [/agreed quotation/gi, 'agreed commercial terms'],
+  [/technical documentation and coordinated logistics/gi, 'commercial coordination and logistics'],
+  [/product sourcing, commercial coordination, technical documentation and logistics/gi, 'product sourcing, commercial coordination and logistics'],
+  [/Product availability, pack size, documentation, commercial terms and destination-market suitability/gi, 'Product availability, pack size, commercial terms and destination-market suitability'],
+  [/Commercial and technical documentation is reviewed for the specific order and destination market\./gi, 'Commercial requirements are reviewed for the specific order and destination market.'],
+  [/product, documentation and destination-market checks/gi, 'product availability and destination-market checks'],
+  [/availability, documentation or destination-market checks/gi, 'availability or destination-market checks'],
+  [/supported by documentation, commercial sourcing and logistics coordination/gi, 'supported by commercial sourcing and logistics coordination'],
+  [/Product availability, specifications, regulatory status and suitability are assessed for the intended destination market and confirmed in writing before any order is accepted\./gi, 'Product availability, specifications, regulatory status and suitability are assessed for the intended destination market and confirmed in writing before any order is accepted.'],
+  [/Product availability, specifications, pricing, packaging, documentation, regulatory suitability, delivery terms and lead times/gi, 'Product availability, specifications, pricing, packaging, regulatory suitability, delivery terms and lead times']
+];
+
+const replacePublicText = (root = document.body) => {
+  if (!root) return;
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  const textNodes = [];
+  while (walker.nextNode()) textNodes.push(walker.currentNode);
+  textNodes.forEach((node) => {
+    let value = node.nodeValue;
+    publicCopyReplacements.forEach(([pattern, replacement]) => {
+      value = value.replace(pattern, replacement);
+    });
+    node.nodeValue = value;
+  });
+};
+
+replacePublicText();
+
+// Remove public-facing blocks that specifically advertise TDS/SDS/COA.
+document.querySelectorAll('.benefit').forEach((item) => {
+  if (/TDS|SDS|COA|Documentation Support/i.test(item.textContent)) item.remove();
+});
+
+document.querySelectorAll('.stats-grid article').forEach((item) => {
+  if (/TDS|SDS|COA|document types available/i.test(item.textContent)) item.remove();
+});
+
+document.querySelectorAll('.faq-list details').forEach((item) => {
+  if (/TDS|SDS|COA|technical documentation/i.test(item.textContent)) item.remove();
+});
+
+const qualitySection = document.querySelector('.quality-section');
+if (qualitySection && /TDS|SDS|COA|documentation/i.test(qualitySection.textContent)) {
+  const kicker = qualitySection.querySelector('.section-kicker');
+  const heading = qualitySection.querySelector('h2');
+  const paragraph = qualitySection.querySelector('p');
+  if (kicker) kicker.textContent = 'QUALITY & SUPPLY';
+  if (heading) heading.textContent = 'Supporting professional commercial sourcing';
+  if (paragraph) paragraph.textContent = 'We review product requirements, availability, specifications, regulatory status and destination-market suitability for each enquiry. Supply details are confirmed directly with the customer before an order is accepted.';
+}
+
+const enquiryChecklist = document.querySelector('.enquiry-check-list');
+if (enquiryChecklist) {
+  enquiryChecklist.querySelectorAll('li').forEach((item) => {
+    if (/documentation/i.test(item.textContent)) item.textContent = 'Intended application or other commercial requirements';
+  });
+}
+
+const messageField = document.querySelector('#enquiry textarea[name="message"]');
+if (messageField) messageField.placeholder = 'Please include any delivery, application or other commercial requirements.';
+
+const enquiryForm = document.querySelector('#enquiry form');
+if (enquiryForm) {
+  const subject = enquiryForm.querySelector('input[name="_subject"]');
+  const autoresponse = enquiryForm.querySelector('input[name="_autoresponse"]');
+  const submit = enquiryForm.querySelector('.form-submit');
+  if (subject) subject.value = 'Website enquiry — Shray & Co Supplies Ltd';
+  if (autoresponse) autoresponse.value = 'Thank you for contacting Shray & Co Supplies Ltd. We have received your enquiry and aim to acknowledge it within one working day. A detailed response may require product availability and destination-market checks.';
+  if (submit) submit.innerHTML = 'Send enquiry <span aria-hidden="true">→</span>';
+}
 
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav-links');
