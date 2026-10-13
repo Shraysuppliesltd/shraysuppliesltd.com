@@ -378,15 +378,15 @@
         <label><span>Company</span><input name="company" autocomplete="organization" maxlength="160"></label>
       </div>
       <div class="form-row">
-        <label><span>Email address *</span><input name="_replyto" type="email" autocomplete="email" maxlength="254" required></label>
-        <label><span>Telephone</span><input name="telephone" type="tel" autocomplete="tel" maxlength="40"></label>
+        <label><span>Email address *</span><input name="email" type="email" autocomplete="email" maxlength="254" required></label>
+        <label><span>Telephone *</span><input name="telephone" type="tel" autocomplete="tel" maxlength="40" required></label>
       </div>
       <div class="form-row">
         <label><span>Product *</span><select name="product" required><option value="">Please select</option><option>SLES 70%</option><option>CAPB 35%</option><option>CAPB 45%</option><option>LABSA 96%</option><option>Polysorbate 20</option><option>Polysorbate 60</option><option>Polysorbate 80</option><option>Other chemical raw material</option></select></label>
-        <label><span>Quantity required</span><input name="quantity" maxlength="100" placeholder="For example: 1 x 20 ft container"></label>
+        <label><span>Quantity required *</span><input name="quantity" required maxlength="100" placeholder="For example: 1 x 20 ft container"></label>
       </div>
       <div class="form-row">
-        <label><span>Destination country *</span><input name="destination" maxlength="100" required></label>
+        <label><span>Delivery postcode / destination *</span><input name="destination" maxlength="100" required></label>
         <label><span>Packaging preference</span><select name="packaging"><option>Please advise</option><option>Drums</option><option>IBCs</option><option>Bulk quantity</option></select></label>
       </div>
       <label><span>Further requirements</span><textarea name="message" rows="4" maxlength="1500" placeholder="Please include any documentation, delivery or application requirements."></textarea></label>
