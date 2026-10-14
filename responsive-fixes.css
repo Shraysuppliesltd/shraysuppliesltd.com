@@ -5,7 +5,7 @@
 .brand-name span{white-space:normal}
 .hero-bg{background:linear-gradient(135deg,#eaf6ff 0%,#d6eaf9 58%,#bddcf2 100%)!important}
 
-/* Homepage hierarchy: company name is primary; service headline supports it. */
+/* Responsive brand and service heading sizes. */
 .hero-left{background:linear-gradient(145deg,#f7fbff 0%,#e7f3fc 100%)!important}
 .brand-name{font-size:clamp(3.35rem,5vw,5.15rem)!important;color:#052a5e!important;font-weight:900!important;text-shadow:0 1px 0 rgba(255,255,255,.9)}
 .brand-mark{filter:drop-shadow(0 5px 10px rgba(5,42,94,.12))}
@@ -14,7 +14,7 @@
 .hero-right{background:linear-gradient(145deg,#eaf6ff,#d6eaf9)}
 
 /* Homepage product cards: show the supplied raw-material photography. */
-.product-grid .product-card:nth-child(-n+4) img{display:block!important;width:100%!important;height:132px!important;min-height:132px!important;margin:0!important;padding:0!important;object-fit:cover!important;object-position:center!important}
+.product-grid .product-card:nth-child(-n+4) img{display:block!important;width:100%!important;height:132px!important;min-height:132px!important;margin:0!important;padding:0!important;object-fit:contain!important;object-position:center!important}
 .product-grid .product-card:nth-child(-n+4) .product-card-link::before,
 .product-grid .product-card:nth-child(-n+4) .product-card-link::after{content:none!important;display:none!important}
 .product-grid .product-card:nth-child(-n+4) .product-card-link{position:relative}
@@ -28,3 +28,8 @@
 @media (min-width:951px) and (max-width:1180px){.hero{grid-template-columns:51% 49%}.hero-left{padding:38px 22px 38px 26px}.brand-lockup{gap:10px}.brand-mark{width:108px;flex:0 0 auto}.brand-name{font-size:clamp(2.85rem,4.25vw,3.8rem)!important;line-height:1}.brand-tag{font-size:.69rem;letter-spacing:.09em}.hero-copy{padding:36px 24px}.hero h1{font-size:clamp(2.45rem,3.9vw,3.65rem)!important}}
 @media(max-width:950px){.hero{grid-template-columns:1fr;min-height:0;overflow:visible}.hero-left{min-height:300px}.hero-right{min-height:330px}.brand-name{font-size:clamp(2.65rem,7.4vw,4.15rem)!important}.hero h1{font-size:clamp(2.45rem,7vw,3.6rem)!important}.product-hero-image{max-height:250px!important}}
 @media(max-width:620px){.site-header{position:relative!important;top:auto!important;height:auto!important;min-height:0!important;z-index:50}.nav{min-height:0!important;height:auto!important;padding:10px 13px 14px!important;grid-template-columns:minmax(0,1fr) auto!important;align-items:center!important}.mini-brand{min-width:0!important;white-space:normal!important;line-height:1.15!important;font-size:.82rem!important}.menu-toggle{position:static!important;margin:0!important}.quote-top{position:static!important;grid-column:1/-1!important;width:100%!important;margin:8px 0 0!important;padding:15px 12px!important;display:block!important}.nav-links{position:static!important;grid-column:1/-1!important;width:100%!important}main{position:relative!important;z-index:1!important}.hero{margin-top:0!important}.hero-left{min-height:0;padding:28px 18px}.brand-lockup{align-items:center;gap:10px}.brand-mark{width:82px;max-height:110px;flex:0 0 auto}.brand-name{font-size:clamp(1.9rem,8.6vw,2.5rem)!important;line-height:1.03;letter-spacing:-.035em}.brand-tag{font-size:.68rem;line-height:1.5;letter-spacing:.08em}.gold-line{margin:14px 0}.hero-right{min-height:0}.hero-copy{padding:30px 18px 34px}.hero h1{font-size:clamp(2.05rem,9.5vw,2.75rem)!important;line-height:1!important}.product-grid{gap:18px}.product-card{min-height:0}.product-copy{padding:16px 15px 18px}.product-card-cta{padding-top:14px}.product-grid .product-card:nth-child(-n+4) img{height:150px!important;min-height:150px!important}.product-hero-image-frame{padding:9px}.product-hero-image{max-height:210px!important}}
+
+/* Full raw-material artwork and requested service headline hierarchy. */
+.product-grid .product-card:nth-child(-n+4) img{height:auto!important;min-height:0!important;object-fit:contain!important;background:#f4faff}
+@media(min-width:951px){.brand-name{font-size:clamp(2.6rem,3.6vw,3.8rem)!important}.hero h1{font-size:clamp(2.9rem,4.1vw,4.3rem)!important}}
+.enquiry-notice{padding:22px 0;background:#edf6ff;border-block:1px solid #d5e5f1}.enquiry-notice p{margin:0;line-height:1.6}.enquiry-notice a{color:var(--blue);font-weight:700}
