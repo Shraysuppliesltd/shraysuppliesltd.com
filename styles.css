@@ -461,3 +461,8 @@ footer{background:#031e45;color:#d5e0ec;padding:20px 0;font-size:.83rem}
   .brand-tag{font-size:.72rem;letter-spacing:.11em}
   .hero-copy{padding-left:28px;padding-right:22px}
 }
+
+/* Keep product image labels visible without cropping their artwork. */
+.product-card img{height:auto;aspect-ratio:2 / 1;object-fit:contain;object-position:center;background:#f3f7fb}
+.product-hero-image-frame{aspect-ratio:auto;min-height:180px;display:flex;align-items:center;justify-content:center}
+.product-hero-visual .product-hero-image{height:auto;max-height:420px;object-fit:contain;object-position:center}
