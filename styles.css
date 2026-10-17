@@ -466,3 +466,12 @@ footer{background:#031e45;color:#d5e0ec;padding:20px 0;font-size:.83rem}
 .product-card img{height:auto;aspect-ratio:2 / 1;object-fit:contain;object-position:center;background:#f3f7fb}
 .product-hero-image-frame{aspect-ratio:auto;min-height:180px;display:flex;align-items:center;justify-content:center}
 .product-hero-visual .product-hero-image{height:auto;max-height:420px;object-fit:contain;object-position:center}
+
+/* Approved homepage navigation: no small top-left logo; preserve hero/footer branding. */
+.site-header{background:#062b60;border-bottom:0}
+.nav{grid-template-columns:1fr auto;gap:22px}
+.nav-links{justify-content:flex-start}
+.nav-links>a,.nav-links .products-dropdown summary{color:#fff}
+.nav-links>a:hover,.nav-links .products-dropdown summary:hover{color:#ffcc37}
+.quote-top{background:#ffc72f;color:#071d3c}
+@media(max-width:800px){.nav{grid-template-columns:1fr auto}.menu-toggle{color:#062b60;background:#fff}.nav-links{background:#062b60}}
