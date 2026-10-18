@@ -44,52 +44,24 @@
 <script src="script.js?v=20260905-enquiry-form" defer></script>
 <style>
 .products-dropdown{position:relative;align-self:center}.products-dropdown summary{cursor:pointer;list-style:none;padding:10px 12px;color:inherit;font:inherit}.products-dropdown summary::after{content:" ▾"}.products-dropdown-menu{position:absolute;top:100%;left:0;z-index:1000;min-width:220px;background:#fff;color:#102d50;border:1px solid #d9e2eb;border-radius:8px;box-shadow:0 12px 25px #0002;padding:8px;display:flex;flex-direction:column}.products-dropdown-menu a{color:#102d50!important;display:block;padding:10px 12px;text-decoration:none;border-radius:5px}.products-dropdown-menu a:hover,.products-dropdown-menu a:focus{background:#eef4fb}@media(max-width:800px){.products-dropdown-menu{position:static;box-shadow:none;min-width:0}.products-dropdown{width:100%}}
+</style><style>
+/* Approved homepage visual — 18 October 2026 */
+.site-header{background:#082c59;border:0}.nav{min-height:55px;grid-template-columns:1fr auto auto;gap:18px}.nav-links{gap:22px}.nav-links>a,.products-dropdown summary{color:#fff!important;font-weight:500}.nav-links>a:hover{color:#ffc82f!important}.quote-top,.btn.primary{background:#ffc629!important;color:#08234d!important;border:0!important;font-weight:800}.nav-whatsapp{color:#fff;text-decoration:none;font-weight:700;white-space:nowrap}
+.approved-hero{display:grid;grid-template-columns:36% 64%;min-height:330px;background:#f6fbff}.approved-hero .hero-left{padding:22px 15px 22px max(22px,calc((100vw - 1400px)/2));background:linear-gradient(90deg,#fff,#f3faff);display:flex;flex-direction:column;justify-content:center}.approved-hero .brand-lockup{display:flex;align-items:center;gap:12px}.approved-hero .brand-mark{width:112px;height:112px;object-fit:contain}.approved-hero .brand-name{font-size:clamp(1.2rem,2.7vw,2.7rem);font-weight:900;color:#092f6d;line-height:1.05;letter-spacing:.01em}.approved-hero .brand-name span{display:block}.approved-hero .brand-name span+span{font-size:.57em;letter-spacing:.25em;margin-top:8px}.approved-hero h1{font-size:clamp(1.4rem,2.3vw,2.5rem);line-height:1.08;margin:14px 0 5px;color:#082e71;letter-spacing:-.025em}.approved-hero .hero-left>p{color:#173a76;line-height:1.25;margin:0 0 14px;font-size:clamp(.85rem,1.1vw,1rem)}.approved-hero .hero-actions{display:flex;gap:8px}.approved-hero .btn{font-size:.85rem;padding:11px 13px;white-space:nowrap}.approved-hero .hero-right{position:relative;min-height:330px}.approved-hero .hero-bg{background:linear-gradient(90deg,rgba(245,250,255,.4),rgba(255,255,255,0)),url('assets/hero-ship.jpg') center/cover no-repeat}.approved-hero .hero-copy{position:relative;max-width:none;height:100%;display:flex;justify-content:space-between;align-items:flex-start;padding:22px}.hero-script{font-family:Georgia,serif;font-style:italic;font-size:clamp(1.3rem,2.1vw,2.4rem)!important;font-weight:700;color:#092e70;transform:rotate(-8deg);margin:8px auto!important;text-align:center;line-height:1.25!important;text-shadow:0 1px 4px #fff}.hero-points{display:grid;gap:13px;background:rgba(255,255,255,.82);padding:10px;border-radius:8px;color:#082e70;font-size:.78rem;font-weight:800}.industry-ribbon{display:flex;align-items:center;justify-content:space-around;gap:12px;padding:13px 18px;background:#fff;color:#092e70;border-bottom:3px solid #e4edf8;font-size:.78rem}.industry-ribbon strong{font-size:.9rem}.industry-ribbon span{padding-left:10px;border-left:1px solid #cbd5e3}.products-section{background:#edf6fc}.products-section .product-grid{grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}.products-section .product-card{border-radius:5px;text-align:center}.products-section .product-card img{height:100px;object-fit:contain;background:#fff}.products-section .product-copy{padding:10px 5px}.products-section .product-copy h3{font-size:.9rem;color:#082f72}.products-section .product-copy p,.products-section .product-type{font-size:.7rem}.products-section .product-card-cta{font-size:.75rem}.products-section .product-card-visual{min-height:100px}
+@media(max-width:1100px){.products-section .product-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.industry-ribbon{flex-wrap:wrap}.nav-links{gap:12px}}
+@media(max-width:800px){.site-header .nav{grid-template-columns:auto 1fr auto}.nav-whatsapp{font-size:.8rem}.approved-hero{grid-template-columns:1fr}.approved-hero .hero-left{padding:22px}.approved-hero .hero-right{min-height:230px}.approved-hero .hero-copy{min-height:230px}.approved-hero .brand-mark{width:85px;height:85px}.approved-hero .hero-actions{flex-wrap:wrap}.products-section .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.industry-ribbon{justify-content:flex-start}.industry-ribbon span{font-size:.75rem}.hero-points{font-size:.65rem}.hero-script{font-size:1.3rem!important}.nav-links{background:#082c59}.menu-toggle{color:#082c59;background:#fff}}
+@media(max-width:420px){.nav-whatsapp{display:none}.site-header .nav{grid-template-columns:auto 1fr}.approved-hero .brand-name{font-size:1.35rem}.hero-points{gap:6px}}
 </style>
 </head>
 <body>
 
 <a class="skip-link" href="#main-content">Skip to main content</a>
 
-<header class="site-header">
-  <div class="wrap nav">
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
-    <nav class="nav-links" id="primary-navigation" aria-label="Main navigation">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <details class="products-dropdown"><summary>Products</summary><div class="products-dropdown-menu"><a href="#products">All Products</a><a href="/sles-70/">SLES 70%</a><a href="/capb-35/">CAPB 35%</a><a href="/capb-45/">CAPB 45%</a><a href="/labsa-96/">LABSA 96%</a><a href="/polysorbate-20/">Polysorbate 20</a><a href="/polysorbate-60/">Polysorbate 60</a><a href="/polysorbate-80/">Polysorbate 80</a></div></details>
-      <a href="#supply">Supply</a>
-      <a href="#quality">Quality</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a class="quote-top" href="#enquiry">Request a Quotation</a>
-  </div>
-</header>
+<header class="site-header"><div class="wrap nav"><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button><nav class="nav-links" id="primary-navigation" aria-label="Main navigation"><a href="#home">Home</a><details class="products-dropdown"><summary>Products</summary><div class="products-dropdown-menu"><a href="#products">All Products</a><a href="/sles-70/">SLES 70%</a><a href="/capb-35/">CAPB 35%</a><a href="/capb-45/">CAPB 45%</a><a href="/labsa-96/">LABSA 96%</a><a href="/polysorbate-20/">Polysorbate 20</a><a href="/polysorbate-60/">Polysorbate 60</a><a href="/polysorbate-80/">Polysorbate 80</a></div></details><a href="#about">About Us</a><a href="#trust">Why Choose Us</a><a href="#faq">FAQs</a><a href="#contact">Contact</a></nav><a class="quote-top" href="#enquiry">Request a Quotation →</a><a class="nav-whatsapp" href="https://wa.me/447967116814" target="_blank" rel="noopener">☏ WhatsApp</a></div></header>
 
 <main id="main-content">
 
-<section class="hero" id="home">
-  <div class="hero-left">
-    <div class="brand-lockup">
-      <img src="assets/shray-company-mark.png" alt="Shray & Co Supplies Ltd company logo" class="brand-mark" width="206" height="206">
-      <div class="brand-name"><span>Shray &amp; Co</span><span>Supplies Ltd</span></div>
-    </div>
-    <div class="gold-line"></div>
-    <div class="brand-tag">CHEMICALS <span aria-hidden="true">•</span> SURFACTANTS <span aria-hidden="true">•</span> GLOBAL SUPPLY</div>
-  </div>
-
-  <div class="hero-right">
-    <div class="hero-bg" aria-hidden="true"></div>
-    <div class="hero-copy">
-      <div class="eyebrow">RELIABLE CHEMICAL SUPPLY.</div>
-      <h1>Professional<br>chemical sourcing.</h1>
-      <p>Shray &amp; Co Supplies Ltd supplies quality surfactants and speciality chemical raw materials, supporting customers with competitive commercial solutions, technical documentation and coordinated logistics.</p>
-      <div class="hero-actions">
-        <a class="btn primary" href="#products">Our Products <span aria-hidden="true">→</span></a>
-        <a class="btn secondary" href="#enquiry">Request a Quotation</a>
-      </div>
-    </div>
-  </div>
-</section>
+<section class="hero approved-hero" id="home"><div class="hero-left"><div class="brand-lockup"><img src="assets/shray-company-mark.png" alt="SC globe and British flag — Shray & Co Supplies Ltd" class="brand-mark" width="170" height="170"><div class="brand-name"><span>SHRAY &amp; CO</span><span>SUPPLIES LTD</span></div></div><h1>Professional Chemical Sourcing</h1><p>Supporting manufacturers, distributors and formulators with surfactants and speciality chemical raw materials across the UK and international markets.</p><div class="hero-actions"><a class="btn primary" href="#enquiry">Request a Quotation →</a><a class="btn secondary" href="#products">ⓘ Our Products</a></div></div><div class="hero-right"><div class="hero-bg" aria-hidden="true"></div><div class="hero-copy"><p class="hero-script">Ingredients<br>for a Cleaner<br>Brighter Tomorrow</p><div class="hero-points"><span>♧ &nbsp; QUALITY SOURCING</span><span>◎ &nbsp; SUSTAINABLE SOLUTIONS</span><span>♢ &nbsp; TRUSTED PARTNER</span><span>◉ &nbsp; GLOBAL REACH</span></div></div></div></section><section class="industry-ribbon" aria-label="Industries we serve"><strong>INDUSTRIES<br>WE SERVE</strong><span>⌂ Household Cleaning</span><span>▣ Laundry Detergents</span><span>♡ Personal Care</span><span>▥ Industrial Cleaning</span><span>🚘 Car Care</span><span>♧ Agriculture</span><span>⚙ Contract Manufacturing</span></section>
 
 <aside class="enquiry-notice" aria-label="Customer enquiry notice">
   <div class="wrap"><p><strong>Message for Robert Margetts:</strong> Please contact Shray &amp; Co Supplies Ltd again regarding your SLES 70% quotation enquiry. Email <a href="mailto:nishpatel@shraysuppliesltd.com">nishpatel@shraysuppliesltd.com</a> or use our <a href="#enquiry">enquiry form</a>, including your contact details so we can reply.</p></div>
@@ -153,7 +125,7 @@
 
 <section class="products-section" id="products">
   <div class="wrap">
-    <div class="section-kicker">OUR KEY PRODUCTS</div>
+    <div class="section-kicker">OUR PRODUCT RANGE</div>
     <h2>Surfactants &amp; Speciality Chemicals</h2>
     <p class="section-sub">Raw materials for industrial and commercial applications, subject to market-specific confirmation.</p>
 
