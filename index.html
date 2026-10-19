@@ -106,6 +106,20 @@ html body main .approved-hero .hero-right,html body main .approved-hero .hero-co
 html body main .approved-hero .hero-right::before,html body main .approved-hero .hero-right::after,html body main .approved-hero .hero-copy::before,html body main .approved-hero .hero-copy::after{content:none!important;display:none!important;background-image:none!important}
 html body main .approved-hero .hero-bg{display:none!important;background:none!important}
 </style>
+<style id="hero-image-rebuild-v6">
+/* Isolate the ship from the legacy banner; keep all old lettering outside crop. */
+html body main .approved-hero .hero-right{background:linear-gradient(110deg,#eef8ff,#cbe8f7)!important;position:relative!important;isolation:isolate!important;overflow:hidden!important}
+html body main .approved-hero .hero-right::after{content:""!important;display:block!important;position:absolute!important;right:0!important;bottom:0!important;top:0!important;width:45%!important;z-index:-1!important;background-image:url('assets/hero-ship.jpg')!important;background-repeat:no-repeat!important;background-position:right bottom!important;background-size:auto 160%!important;opacity:.95!important}
+html body main .approved-hero .hero-copy{position:relative!important;z-index:1!important;min-height:200px!important}
+html body main .approved-hero .hero-script{max-width:53%!important;flex:0 1 53%!important}
+html body main .approved-hero .hero-points{max-width:46%!important;flex:0 1 46%!important;background:rgba(255,255,255,.9)!important}
+@media(max-width:800px){
+html body main .approved-hero .hero-right::after{width:47%!important;background-size:auto 160%!important}
+html body main .approved-hero .hero-copy{min-height:205px!important;padding:18px!important;justify-content:space-between!important;gap:8px!important}
+html body main .approved-hero .hero-script{max-width:52%!important;flex:0 0 auto!important;font-size:1.16rem!important}
+html body main .approved-hero .hero-points{max-width:100%!important;flex:0 0 auto!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;align-self:stretch!important;margin-top:12px!important}
+}
+</style>
 </head>
 <body>
 
