@@ -40,7 +40,7 @@
 }
 </script>
 <link rel="stylesheet" href="styles.css?v=20261019-v4">
-<link rel="stylesheet" href="responsive-fixes.css?v=20261019-v4">
+<link rel="stylesheet" href="responsive-fixes.css?v=20261019-v5">
 <script src="script.js?v=20260905-enquiry-form" defer></script>
 <style>
 .products-dropdown{position:relative;align-self:center}.products-dropdown summary{cursor:pointer;list-style:none;padding:10px 12px;color:inherit;font:inherit}.products-dropdown summary::after{content:" ▾"}.products-dropdown-menu{position:absolute;top:100%;left:0;z-index:1000;min-width:220px;background:#fff;color:#102d50;border:1px solid #d9e2eb;border-radius:8px;box-shadow:0 12px 25px #0002;padding:8px;display:flex;flex-direction:column}.products-dropdown-menu a{color:#102d50!important;display:block;padding:10px 12px;text-decoration:none;border-radius:5px}.products-dropdown-menu a:hover,.products-dropdown-menu a:focus{background:#eef4fb}@media(max-width:800px){.products-dropdown-menu{position:static;box-shadow:none;min-width:0}.products-dropdown{width:100%}}
@@ -99,6 +99,12 @@ body:has(.approved-hero) .industry-ribbon span{white-space:normal;overflow-wrap:
 .industry-ribbon strong,body:has(.approved-hero) .industry-ribbon strong{grid-column:1/-1!important}
 .industry-ribbon span,body:has(.approved-hero) .industry-ribbon span{display:block!important;min-width:0!important;border-left:2px solid #e5b72e!important;padding-left:9px!important;font-size:.78rem!important}
 }
+</style>
+<style id="force-clean-hero-v5">
+/* All former ship artwork was embedded with obsolete lettering. Override every background layer. */
+html body main .approved-hero .hero-right,html body main .approved-hero .hero-copy{background:#dceefa!important;background-image:none!important}
+html body main .approved-hero .hero-right::before,html body main .approved-hero .hero-right::after,html body main .approved-hero .hero-copy::before,html body main .approved-hero .hero-copy::after{content:none!important;display:none!important;background-image:none!important}
+html body main .approved-hero .hero-bg{display:none!important;background:none!important}
 </style>
 </head>
 <body>
