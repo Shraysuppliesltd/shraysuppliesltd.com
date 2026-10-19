@@ -39,8 +39,8 @@
   ]
 }
 </script>
-<link rel="stylesheet" href="styles.css?v=20261019-cleanhero3">
-<link rel="stylesheet" href="responsive-fixes.css?v=20261019-cleanhero3">
+<link rel="stylesheet" href="styles.css?v=20261019-v4">
+<link rel="stylesheet" href="responsive-fixes.css?v=20261019-v4">
 <script src="script.js?v=20260905-enquiry-form" defer></script>
 <style>
 .products-dropdown{position:relative;align-self:center}.products-dropdown summary{cursor:pointer;list-style:none;padding:10px 12px;color:inherit;font:inherit}.products-dropdown summary::after{content:" ▾"}.products-dropdown-menu{position:absolute;top:100%;left:0;z-index:1000;min-width:220px;background:#fff;color:#102d50;border:1px solid #d9e2eb;border-radius:8px;box-shadow:0 12px 25px #0002;padding:8px;display:flex;flex-direction:column}.products-dropdown-menu a{color:#102d50!important;display:block;padding:10px 12px;text-decoration:none;border-radius:5px}.products-dropdown-menu a:hover,.products-dropdown-menu a:focus{background:#eef4fb}@media(max-width:800px){.products-dropdown-menu{position:static;box-shadow:none;min-width:0}.products-dropdown{width:100%}}
@@ -83,6 +83,23 @@ body:has(.approved-hero) .industry-ribbon span{white-space:normal;overflow-wrap:
  body:has(.approved-hero) .industry-ribbon span{display:block!important;border-left:2px solid #ffc629!important;padding-left:9px!important;min-width:0!important;font-size:.82rem!important;line-height:1.4!important}
 }
 </style>
+<style id="homepage-cleanup-v4">
+.approved-hero .hero-right,body:has(.approved-hero) .approved-hero .hero-right{background:linear-gradient(135deg,#eaf6ff,#bdddf0)!important;min-width:0}
+.approved-hero .hero-copy{position:relative!important;display:flex!important;gap:20px!important;align-items:center!important;justify-content:space-between!important;flex-wrap:wrap!important;max-width:none!important;width:100%!important;height:auto!important;min-height:220px!important}
+.approved-hero .hero-script{transform:none!important;margin:0!important;max-width:100%!important;line-height:1.25!important;flex:1 1 160px}
+.approved-hero .hero-points{position:relative!important;display:grid!important;grid-template-columns:1fr!important;gap:9px!important;margin:0!important;flex:1 1 170px;font-size:.76rem!important}
+.industry-ribbon{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:12px!important;align-items:center!important}
+.industry-ribbon strong,.industry-ribbon span{min-width:0!important;overflow-wrap:anywhere!important;white-space:normal!important;line-height:1.35!important}
+@media(max-width:800px){
+.approved-hero .hero-right,body:has(.approved-hero) .approved-hero .hero-right{min-height:0!important}
+.approved-hero .hero-copy,body:has(.approved-hero) .approved-hero .hero-copy{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:18px!important;min-height:0!important;padding:22px 18px!important}
+.approved-hero .hero-script,body:has(.approved-hero) .approved-hero .hero-script{font-size:1.4rem!important;flex:auto!important;text-align:left!important}
+.approved-hero .hero-points,body:has(.approved-hero) .approved-hero .hero-points{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;flex:auto!important;padding:12px!important;background:#ffffffc9!important;gap:12px!important;font-size:.7rem!important}
+.industry-ribbon,body:has(.approved-hero) .industry-ribbon{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important;padding:16px!important}
+.industry-ribbon strong,body:has(.approved-hero) .industry-ribbon strong{grid-column:1/-1!important}
+.industry-ribbon span,body:has(.approved-hero) .industry-ribbon span{display:block!important;min-width:0!important;border-left:2px solid #e5b72e!important;padding-left:9px!important;font-size:.78rem!important}
+}
+</style>
 </head>
 <body>
 
@@ -92,11 +109,9 @@ body:has(.approved-hero) .industry-ribbon span{white-space:normal;overflow-wrap:
 
 <main id="main-content">
 
-<section class="hero approved-hero" id="home"><div class="hero-left"><div class="brand-lockup"><img src="assets/shray-company-mark.png" alt="SC globe and British flag — Shray & Co Supplies Ltd" class="brand-mark" width="170" height="170"><div class="brand-name"><span>SHRAY &amp; CO</span><span>SUPPLIES LTD</span></div></div><h1>Professional Chemical Sourcing</h1><p>Supporting manufacturers, distributors and formulators with surfactants and speciality chemical raw materials across the UK and international markets.</p><div class="hero-actions"><a class="btn primary" href="#enquiry">Request a Quotation →</a><a class="btn secondary" href="#products">ⓘ Our Products</a></div></div><div class="hero-right"><div class="hero-bg" aria-hidden="true"></div><div class="hero-copy"><p class="hero-script">Ingredients<br>for a Cleaner<br>Brighter Tomorrow</p><div class="hero-points"><span>♧ &nbsp; QUALITY SOURCING</span><span>◎ &nbsp; SUSTAINABLE SOLUTIONS</span><span>♢ &nbsp; TRUSTED PARTNER</span><span>◉ &nbsp; GLOBAL REACH</span></div></div></div></section><section class="industry-ribbon" aria-label="Industries we serve"><strong>INDUSTRIES<br>WE SERVE</strong><span>⌂ Household Cleaning</span><span>▣ Laundry Detergents</span><span>♡ Personal Care</span><span>▥ Industrial Cleaning</span><span>🚘 Car Care</span><span>♧ Agriculture</span><span>⚙ Contract Manufacturing</span></section>
+<section class="hero approved-hero" id="home"><div class="hero-left"><div class="brand-lockup"><img src="assets/shray-company-mark.png" alt="SC globe and British flag — Shray & Co Supplies Ltd" class="brand-mark" width="170" height="170"><div class="brand-name"><span>SHRAY &amp; CO</span><span>SUPPLIES LTD</span></div></div><h1>Professional Chemical Sourcing</h1><p>Supporting manufacturers, distributors and formulators with surfactants and speciality chemical raw materials across the UK and international markets.</p><div class="hero-actions"><a class="btn primary" href="#enquiry">Request a Quotation →</a><a class="btn secondary" href="#products">ⓘ Our Products</a></div></div><div class="hero-right"><div class="hero-copy"><p class="hero-script">Ingredients<br>for a Cleaner<br>Brighter Tomorrow</p><div class="hero-points"><span>♧ &nbsp; QUALITY SOURCING</span><span>◎ &nbsp; SUSTAINABLE SOLUTIONS</span><span>♢ &nbsp; TRUSTED PARTNER</span><span>◉ &nbsp; GLOBAL REACH</span></div></div></div></section><section class="industry-ribbon" aria-label="Industries we serve"><strong>INDUSTRIES<br>WE SERVE</strong><span>⌂ Household Cleaning</span><span>▣ Laundry Detergents</span><span>♡ Personal Care</span><span>▥ Industrial Cleaning</span><span>🚘 Car Care</span><span>♧ Agriculture</span><span>⚙ Contract Manufacturing</span></section>
 
-<aside class="enquiry-notice" aria-label="Customer enquiry notice">
-  <div class="wrap"><p><strong>Message for Robert Margetts:</strong> Please contact Shray &amp; Co Supplies Ltd again regarding your SLES 70% quotation enquiry. Email <a href="mailto:nishpatel@shraysuppliesltd.com">nishpatel@shraysuppliesltd.com</a> or use our <a href="#enquiry">enquiry form</a>, including your contact details so we can reply.</p></div>
-</aside>
+
 
 <section class="benefits wrap" id="supply" aria-label="Supply services">
   <div class="benefit"><div class="round" aria-hidden="true">◎</div><div><strong>International Sourcing</strong><span>Supporting UK and international enquiries</span></div></div>
