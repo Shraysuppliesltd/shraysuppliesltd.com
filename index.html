@@ -52,6 +52,17 @@
 @media(max-width:800px){.site-header .nav{grid-template-columns:auto 1fr auto}.nav-whatsapp{font-size:.8rem}.approved-hero{grid-template-columns:1fr}.approved-hero .hero-left{padding:22px}.approved-hero .hero-right{min-height:230px}.approved-hero .hero-copy{min-height:230px}.approved-hero .brand-mark{width:85px;height:85px}.approved-hero .hero-actions{flex-wrap:wrap}.products-section .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.industry-ribbon{justify-content:flex-start}.industry-ribbon span{font-size:.75rem}.hero-points{font-size:.65rem}.hero-script{font-size:1.3rem!important}.nav-links{background:#082c59}.menu-toggle{color:#082c59;background:#fff}}
 @media(max-width:420px){.nav-whatsapp{display:none}.site-header .nav{grid-template-columns:auto 1fr}.approved-hero .brand-name{font-size:1.35rem}.hero-points{gap:6px}}
 </style>
+<style id="homepage-repair-20261019">
+/* Repair the hero's missing photographic background and match approved visual */
+.approved-hero .hero-right{isolation:isolate;overflow:hidden}
+.approved-hero .hero-bg{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(245,250,255,.24),rgba(255,255,255,0)),url('assets/hero-ship.jpg') center/cover no-repeat}
+.approved-hero .hero-copy{position:relative;z-index:1}
+.approved-hero .hero-points{margin-left:auto}
+.products-section .product-card img{display:block;width:100%;height:110px;object-fit:contain}
+.products-section .product-card-link{display:block;height:100%}
+.products-section .product-card{overflow:hidden}
+@media(max-width:800px){.approved-hero .hero-bg{background-position:center}.products-section .product-card img{height:125px}}
+</style>
 </head>
 <body>
 
@@ -180,10 +191,7 @@
 
       <article class="product-card">
         <a class="product-card-link" href="/polysorbate-20/">
-          <div class="product-card-visual product-card-visual--20" aria-hidden="true">
-            <span class="product-card-visual-code">P20</span>
-            <span class="product-card-visual-label">NON-IONIC SURFACTANT</span>
-          </div>
+          <img src="assets/polysorbate-20.webp" alt="Polysorbate 20 product illustration" width="600" height="300" loading="lazy">
           <div class="product-copy">
             <h3>Polysorbate 20</h3>
             <p>Polyoxyethylene sorbitan monolaurate</p>
@@ -195,10 +203,7 @@
 
       <article class="product-card">
         <a class="product-card-link" href="/polysorbate-60/">
-          <div class="product-card-visual product-card-visual--60" aria-hidden="true">
-            <span class="product-card-visual-code">P60</span>
-            <span class="product-card-visual-label">NON-IONIC SURFACTANT</span>
-          </div>
+          <img src="assets/polysorbate-60.webp" alt="Polysorbate 60 product illustration" width="600" height="300" loading="lazy">
           <div class="product-copy">
             <h3>Polysorbate 60</h3>
             <p>Polyoxyethylene sorbitan monostearate</p>
@@ -210,10 +215,7 @@
 
       <article class="product-card">
         <a class="product-card-link" href="/polysorbate-80/">
-          <div class="product-card-visual product-card-visual--80" aria-hidden="true">
-            <span class="product-card-visual-code">P80</span>
-            <span class="product-card-visual-label">NON-IONIC SURFACTANT</span>
-          </div>
+          <img src="assets/polysorbate-80.webp" alt="Polysorbate 80 product illustration" width="600" height="300" loading="lazy">
           <div class="product-copy">
             <h3>Polysorbate 80</h3>
             <p>Polyoxyethylene sorbitan monooleate</p>
