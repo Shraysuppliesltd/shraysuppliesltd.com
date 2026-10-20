@@ -121,3 +121,37 @@ document.querySelectorAll('[data-enquiry-product]').forEach((link) => link.addEv
 
 const productPage = document.querySelector('.product-page');
 if (productPage) window.addEventListener('pageshow', () => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }), { once: true });
+
+
+// Explain blocked enquiries instead of leaving visitors with no visible response.
+// Keep the native FormSubmit POST and required contact fields unchanged.
+const quoteForm = document.querySelector('form[data-formsubmit-form]');
+if (quoteForm) {
+  const feedback = document.createElement('p');
+  feedback.setAttribute('role', 'alert');
+  feedback.setAttribute('aria-live', 'assertive');
+  feedback.style.cssText = 'display:none;padding:12px;border-left:4px solid #b42318;background:#fff4f2;color:#84251c;font-weight:700;';
+  const sendButton = quoteForm.querySelector('button[type="submit"]');
+  if (sendButton) sendButton.insertAdjacentElement('beforebegin', feedback);
+  quoteForm.addEventListener('invalid', (event) => {
+    const field = event.target;
+    if (!(field instanceof HTMLElement)) return;
+    feedback.textContent = 'Please complete all required fields, including your email address and telephone number, before sending.';
+    feedback.style.display = 'block';
+  }, true);
+  quoteForm.addEventListener('submit', (event) => {
+    if (!quoteForm.checkValidity()) {
+      event.preventDefault();
+      quoteForm.reportValidity();
+      feedback.textContent = 'Your enquiry has not been sent. Please check the required fields.';
+      feedback.style.display = 'block';
+      return;
+    }
+    feedback.style.display = 'none';
+    if (sendButton) {
+      sendButton.textContent = 'Sending enquiry…';
+      sendButton.setAttribute('aria-disabled', 'true');
+    }
+    // Do not prevent default: the browser must POST directly to FormSubmit.
+  });
+}
