@@ -99,10 +99,6 @@ body:has(.approved-hero) .approved-hero .btn.primary{
   body:has(.approved-hero) .approved-hero .hero-actions .btn{
     font-size:.78rem!important;padding:11px 12px!important;
   }
-  body:has(.approved-hero) .approved-hero .hero-right{min-height:235px!important;}
-  body:has(.approved-hero) .approved-hero .hero-copy{
-    padding:18px!important;min-height:235px!important;
-  }
   body:has(.approved-hero) .products-section .product-grid{
     grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;
   }
@@ -112,14 +108,29 @@ body:has(.approved-hero) .approved-hero .btn.primary{
   body:has(.approved-hero) .approved-hero .brand-name{font-size:1.13rem!important;}
 }
 
-/* 19 Oct mobile repair: remove old banner text embedded in hero-ship.jpg */
+/* Mobile industry ribbon layout. */
 @media(max-width:800px){
- body:has(.approved-hero) .approved-hero .hero-right{min-height:260px!important;background:#d8ecfa!important;overflow:hidden!important;isolation:isolate}
- body:has(.approved-hero) .approved-hero .hero-bg{position:absolute!important;inset:0!important;z-index:-1!important;background-image:linear-gradient(90deg,rgba(239,248,255,.72),rgba(239,248,255,.12)),url('assets/hero-ship.jpg')!important;background-size:auto 100%!important;background-position:right center!important;background-repeat:no-repeat!important}
- body:has(.approved-hero) .approved-hero .hero-copy{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:space-between!important;gap:12px!important;min-height:260px!important;padding:20px!important;max-width:100%!important}
- body:has(.approved-hero) .approved-hero .hero-script{position:relative!important;transform:none!important;margin:0!important;text-align:left!important;font-size:1.2rem!important;line-height:1.25!important;max-width:58%!important;color:#062c61!important}
- body:has(.approved-hero) .approved-hero .hero-points{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:5px 10px!important;max-width:100%!important;width:100%!important;margin:0!important;padding:10px!important;background:rgba(255,255,255,.9)!important;font-size:.65rem!important;line-height:1.4!important}
  body:has(.approved-hero) .industry-ribbon{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;padding:15px!important;align-items:start!important}
  body:has(.approved-hero) .industry-ribbon strong{grid-column:1/-1!important}
  body:has(.approved-hero) .industry-ribbon span{display:block!important;min-width:0!important;overflow-wrap:anywhere!important;border-left:2px solid #e3b52c!important;padding-left:8px!important;font-size:.8rem!important;line-height:1.35!important}
+}
+
+/* Approved image banner: keep legacy hero copy out of the mobile layout. */
+@media(max-width:800px){
+  body:has(.approved-hero) .approved-hero .hero-right{
+    display:block!important;
+    min-height:0!important;
+    aspect-ratio:auto;
+    padding:0!important;
+    background:#e8f5ff!important;
+  }
+  body:has(.approved-hero) .approved-hero .hero-right .hero-copy{
+    display:none!important;
+  }
+  body:has(.approved-hero) .approved-hero .hero-right .shray-approved-banner{
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    object-fit:contain!important;
+  }
 }

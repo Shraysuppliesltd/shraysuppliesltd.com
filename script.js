@@ -1,7 +1,7 @@
 // Load the responsive display safeguards after the main stylesheet.
 const responsiveFixes = document.createElement('link');
 responsiveFixes.rel = 'stylesheet';
-responsiveFixes.href = '/responsive-fixes.css?v=20261004';
+responsiveFixes.href = '/responsive-fixes.css?v=20261023-mobile-banner';
 document.head.appendChild(responsiveFixes);
 
 // Keep the public website positioned as an independent sourcing company.
